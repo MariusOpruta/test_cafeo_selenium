@@ -12,7 +12,7 @@ class ContNouPage:
     CHECK_TERMS = (By.ID,"agree_terms")
     CHECK_YEARS = (By.ID,"agree_age")
     CREATE_CONT_BUTTON = (By.ID,"submitAccount")
-    MESAGE_VALID = (By.CSS_SELECTOR, "#center_column > p.alert.alert-success")
+    MESAGE_VALID = (By.CSS_SELECTOR, '[class="info-account"]')
     def __init__(self, browser):
         self.browser = browser
 
