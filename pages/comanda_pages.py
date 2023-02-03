@@ -29,7 +29,7 @@ class ComandaNoua:
         self.browser.find_element(*self.CANTITATE_SELECT).click()
 
     def select_numar_bucati(self):
-        self.browser.find_element(*self.NUMAR_CANTITATE).send_keys(Keys.ENTER)
+        self.browser.find_element(*self.NUMAR_CANTITATE)
 
     def click_adauga_cos(self):
         self.browser.find_element(*self.ADAUGA_COS).click()
