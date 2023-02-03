@@ -1,12 +1,12 @@
 from selenium.webdriver.common.by import By
 
 class CeaiPage:
-    CEAI_LIST = (By.CSS_SELECTOR,"#block_top_menu > ul > li.sfHoverForce")
+    CEAI_LIST = (By.CSS_SELECTOR,'[href="https://cafeo.ro/ceai/"]')
     CEAI_INFUZABIL = (By.CSS_SELECTOR,'[href="https://cafeo.ro/ceai/ceai-infuzabil/"]')
     SELECT_CEAI = (By.CSS_SELECTOR,'[src="https://cafeo.ro/2413-home_default/eilles-tea-assam-special-teebeutel-25-plicuri.jpg"]')
     SELECT_CANTITATE = (By.CSS_SELECTOR,"#quantity_wanted")
     BUTON_ADAUGA = (By.CSS_SELECTOR,"#add_to_cart > button")
-
+    MESAJ_OK = (By.CSS_SELECTOR,'h2')
     def __init__(self, browser):
         self.browser = browser
 
@@ -21,3 +21,6 @@ class CeaiPage:
 
     def click_buton_adauga(self):
         self.browser.find_element(*self.BUTON_ADAUGA).click()
+
+    def get_mesaj_ok(self):
+        return self.browser.find_element(*self.MESAJ_OK).text

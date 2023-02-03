@@ -14,4 +14,5 @@ def test_ceai(browser):
     ceai.select_ceai_fel()
     ceai.aleg_cantitate(3)
     ceai.click_buton_adauga()
-    assert "Produsul a fost adăugat în coș" in comanda.get_mesaj_adaugat()
+    sleep(4)
+    assert "Produsul a fost adăugat în coș" in ceai.get_mesaj_ok()
