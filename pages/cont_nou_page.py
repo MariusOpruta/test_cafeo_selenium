@@ -13,6 +13,7 @@ class ContNouPage:
     CHECK_YEARS = (By.ID,"agree_age")
     CREATE_CONT_BUTTON = (By.ID,"submitAccount")
     MESAGE_VALID = (By.CLASS_NAME, "info-account")
+    MESSAGE_OK = (By.CSS_SELECTOR,'[class="alert alert-success"]')
     def __init__(self, browser):
         self.browser = browser
 
@@ -46,6 +47,8 @@ class ContNouPage:
     def mesage_valid_text(self):
         return self.browser.find_element(*self.MESAGE_VALID).text
 
+    def message_ok(self):
+        return self.browser.find_element(*self.MESSAGE_OK).text
 
 
 
