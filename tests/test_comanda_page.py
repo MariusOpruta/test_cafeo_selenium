@@ -11,7 +11,7 @@ def test_comanda_noua(browser):
     comanda.click_select_brand()
     comanda.click_select_product()
     comanda.cantitate()
-    comanda.click_cantitate()
+    comanda.click_cantitate(3)
     comanda.select_numar_bucati()
     sleep(4)
     comanda.click_adauga_cos()

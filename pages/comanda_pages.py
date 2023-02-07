@@ -25,8 +25,8 @@ class ComandaNoua:
     def cantitate(self):
         self.browser.find_element(*self.CANTITATE).click()
 
-    def click_cantitate(self):
-        self.browser.find_element(*self.CANTITATE_SELECT).click()
+    def click_cantitate(self,element):
+        self.browser.find_element(*self.CANTITATE_SELECT).send_keys(element)
 
     def select_numar_bucati(self):
         self.browser.find_element(*self.NUMAR_CANTITATE)
