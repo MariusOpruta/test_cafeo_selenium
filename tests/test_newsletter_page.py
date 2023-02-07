@@ -1,6 +1,5 @@
 from time import sleep
 
-from tests.conftest import browser
 from pages.home_page import HomePage
 from pages.newsletter_page import NewsletterPage
 
@@ -12,7 +11,7 @@ def test_newsletter_page(browser):
     newsletter.button_newsletter()
     sleep(5)
     newsletter.switch()
-    #newsletter.email_input('aaaa@yahoo.com')
+    newsletter.email_introduc("aaaa@yahoo.com")
     newsletter.click_select_terms()
     sleep(4)
     newsletter.click_link_terms()
@@ -25,4 +24,3 @@ def test_newsletter_page(browser):
     # assert "Politica de confidentialitate" in newsletter.get_page_politics()
     # browser.close()
     newsletter.click_buton_ok()
-
