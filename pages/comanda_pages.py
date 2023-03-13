@@ -1,17 +1,15 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver import Keys
-from selenium.webdriver.common.devtools.v85.indexed_db import Key
 
 
 class ComandaNoua:
-    SELECT_BRAND = (By.CSS_SELECTOR,'[src="/img/brands/morra.png"]')
-    SELECT_PRODUCT = (By.CSS_SELECTOR,'[src="https://cafeo.ro/2337-home_default/morra-espresso-cafea-boabe-1kg.jpg"]')
-    CANTITATE = (By.ID,"quantity_wanted_p")
-    CANTITATE_SELECT = (By.NAME,"qty")
-    NUMAR_CANTITATE = (By.CSS_SELECTOR,"#quantity_wanted > option:nth-child(3)")
-    ADAUGA_COS = (By.CSS_SELECTOR,'[class="buttons_bottom_block no-print"]')
-    MESAJ_ADAUGAT = (By.CSS_SELECTOR,'[class="layer_cart_product col-xs-12"]')   #"Produsul a fost adăugat în coș"
-    BUTON_DETALI_COS = (By.CSS_SELECTOR,'[class="ajax-proceed-comanda btn btn-default button button-medium button-action ga-track"]')
+    SELECT_BRAND = (By.CSS_SELECTOR, '[src="/img/brands/morra.png"]')
+    SELECT_PRODUCT = (By.CSS_SELECTOR, '[src="https://cafeo.ro/2337-home_default/morra-espresso-cafea-boabe-1kg.jpg"]')
+    CANTITATE = (By.ID, "quantity_wanted_p")
+    CANTITATE_SELECT = (By.NAME, "qty")
+    NUMAR_CANTITATE = (By.CSS_SELECTOR, "#quantity_wanted > option:nth-child(3)")
+    ADAUGA_COS = (By.CSS_SELECTOR, '[class="buttons_bottom_block no-print"]')
+    MESAJ_ADAUGAT = (By.CSS_SELECTOR, '[class="layer_cart_product col-xs-12"]')
+    BUTON_DETALI_COS = (By.CSS_SELECTOR, '[class="ajax-proceed-comanda btn btn-default button button-medium button-action ga-track"]')
 
     def __init__(self, browser):
         self.browser = browser
@@ -25,7 +23,7 @@ class ComandaNoua:
     def cantitate(self):
         self.browser.find_element(*self.CANTITATE).click()
 
-    def click_cantitate(self,element):
+    def click_cantitate(self, element):
         self.browser.find_element(*self.CANTITATE_SELECT).send_keys(element)
 
     def select_numar_bucati(self):
@@ -39,9 +37,3 @@ class ComandaNoua:
 
     def click_buton_detalii_cos(self):
         self.browser.find_element(*self.BUTON_DETALI_COS).click()
-
-
-
-
-
-

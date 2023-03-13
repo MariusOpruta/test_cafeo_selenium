@@ -14,7 +14,6 @@ class HomePage:
     NU_ACUM_BUTTON = (By.CSS_SELECTOR, '[class="v-btn v-btn--flat v-btn--text theme--light v-size--default"]')
     URL = "https://cafeo.ro/"
 
-
     def __init__(self, browser):
         self.browser = browser
 

@@ -1,8 +1,8 @@
 from time import sleep
 
-from tests.conftest import browser
 from pages.home_page import HomePage
 from pages.newsletter_page import NewsletterPage
+
 
 def test_newsletter_page(browser):
     home_page = HomePage(browser)
@@ -27,4 +27,3 @@ def test_newsletter_page(browser):
     # sleep(4)
     newsletter.return_page()
     newsletter.click_buton_ok()
-

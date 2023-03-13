@@ -1,23 +1,23 @@
-import email
-
 from selenium.webdriver.common.by import By
 
+
 class ContNouPage:
-    NEW_EMAIL_IMPUT = (By.ID,'email_create')
+    NEW_EMAIL_IMPUT = (By.ID, 'email_create')
     CONT_NOU_BUTTON = (By.CSS_SELECTOR, '[class="btn btn-default button button-medium button-2action exclusive"]')
-    SELECT_RADIO_BUTTON = (By.CSS_SELECTOR,"#uniform-id_gender1")
-    PRENUME_INPUT = (By.ID,"customer_firstname")
-    NUME_INPUT = (By.ID,"customer_lastname")
-    PAROLA_CREARE_CONT = (By.CSS_SELECTOR,"#passwd")
-    CHECK_TERMS = (By.ID,"agree_terms")
-    CHECK_YEARS = (By.ID,"agree_age")
-    CREATE_CONT_BUTTON = (By.ID,"submitAccount")
+    SELECT_RADIO_BUTTON = (By.CSS_SELECTOR, "#uniform-id_gender1")
+    PRENUME_INPUT = (By.ID, "customer_firstname")
+    NUME_INPUT = (By.ID, "customer_lastname")
+    PAROLA_CREARE_CONT = (By.CSS_SELECTOR, "#passwd")
+    CHECK_TERMS = (By.ID, "agree_terms")
+    CHECK_YEARS = (By.ID, "agree_age")
+    CREATE_CONT_BUTTON = (By.ID, "submitAccount")
     MESAGE_VALID = (By.CLASS_NAME, "info-account")
-    MESSAGE_OK = (By.CSS_SELECTOR,'[class="alert alert-success"]')
+    MESSAGE_OK = (By.CSS_SELECTOR, '[class="alert alert-success"]')
+
     def __init__(self, browser):
         self.browser = browser
 
-    def email_creaza_cont(self,email):
+    def email_creaza_cont(self, email):
         self.browser.find_element(*self.NEW_EMAIL_IMPUT).send_keys(email)
 
     def creaza_cont_buton(self):
@@ -49,7 +49,3 @@ class ContNouPage:
 
     def message_ok(self):
         return self.browser.find_element(*self.MESSAGE_OK).text
-
-
-
-

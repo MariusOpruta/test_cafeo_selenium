@@ -1,5 +1,6 @@
 from pages.home_page import HomePage
 
+
 def test_search_functionality(browser):
     search_text = "capsule lavazza"
     home_page = HomePage(browser)
@@ -7,6 +8,7 @@ def test_search_functionality(browser):
     home_page.make_a_search(search_text)
     for text in home_page.list_of_products_name():
         assert search_text in text.lower(), f'{search_text} nu se gaseste in resultatul cautarii {text}'
+
 
 def test_search_functionality_error_message(browser):
     search_text = "tdhgcb"

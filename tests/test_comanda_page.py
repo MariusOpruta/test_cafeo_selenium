@@ -3,6 +3,7 @@ from time import sleep
 from pages.home_page import HomePage
 from pages.comanda_pages import ComandaNoua
 
+
 def test_comanda_noua(browser):
     home_page = HomePage(browser)
     comanda = ComandaNoua(browser)

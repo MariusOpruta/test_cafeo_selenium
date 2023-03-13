@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class AutentificarePage:
 
-    INTRA_IN_CONT_BUTTON = (By.ID, 'SubmitLogin')
+    INTRA_IN_CONT_BUTTON = (By.ID, "SubmitLogin")
     EMAIL_INPUT = (By.ID, "email")
     PASSWORD_INPUT = (By.ID, "passwd")
     ERROR_MESSAGE_TEXT = (By.CSS_SELECTOR, "ol>li")

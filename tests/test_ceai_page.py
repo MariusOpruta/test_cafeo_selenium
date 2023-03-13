@@ -2,11 +2,10 @@ from time import sleep
 
 from pages.home_page import HomePage
 from pages.ceai_page import CeaiPage
-from pages.comanda_pages import ComandaNoua
+
 
 def test_ceai(browser):
     home_page = HomePage(browser)
-    comanda = ComandaNoua(browser)
     ceai = CeaiPage(browser)
     home_page.load_page()
     sleep(4)
