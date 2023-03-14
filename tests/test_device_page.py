@@ -17,3 +17,4 @@ def test_device_page(browser):
     assert "Produsul a fost adăugat în coș" in device.confirm()
     device.detail_basket()
     assert "TOTAL" in device.total_check()
+

@@ -8,6 +8,10 @@ class AutentificarePage:
     PASSWORD_INPUT = (By.ID, "passwd")
     ERROR_MESSAGE_TEXT = (By.CSS_SELECTOR, "ol>li")
 
+    PERSONAL_INFO = (By.CSS_SELECTOR, "[href='https://cafeo.ro/identitate']")
+    CHECK_EMAIL = (By.CSS_SELECTOR, "#center_column > div")
+
+
     def __init__(self, browser):
         self.browser = browser
 
@@ -23,3 +27,8 @@ class AutentificarePage:
     def get_error_message_text(self):
         return self.browser.find_element(*self.ERROR_MESSAGE_TEXT).text
 
+    def valid_info(self):
+        self.browser.find_element(*self.PERSONAL_INFO).click()
+
+    def get_email(self):
+        return self.browser.find_element(*self.CHECK_EMAIL).text
