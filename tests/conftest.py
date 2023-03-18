@@ -16,6 +16,7 @@ def browser():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     # maximaze window
     driver.maximize_window()
+    driver.implicitly_wait(100)
     # return driver - tabul pe care noi lucram
     yield driver
     # after tests - ce vrem sa facem dupa fiecare test

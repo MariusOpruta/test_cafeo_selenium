@@ -8,7 +8,6 @@ def test_ceai(browser):
     home_page = HomePage(browser)
     ceai = CeaiPage(browser)
     home_page.load_page()
-    sleep(4)
     ceai.ceai_list()
     ceai.select_ceai_fel()
     ceai.aleg_cantitate(3)

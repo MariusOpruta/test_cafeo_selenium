@@ -8,7 +8,6 @@ def test_device_page(browser):
     home_page = HomePage(browser)
     device = DevicePage(browser)
     home_page.load_page()
-    sleep(4)
     device.device_click()
     device.brand_check()
     assert "Aparate cafea" in device.title_check()
