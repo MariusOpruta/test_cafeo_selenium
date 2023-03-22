@@ -31,7 +31,7 @@ def test_login_with_new_data(browser):
     new_data_page = ContNouPage(browser)
     home_page.load_page()
     home_page.click_contul_meu_button()
-    new_data_page.email_creaza_cont("marius40.hb05123@yahoo.com")
+    new_data_page.email_creaza_cont("marius43.hb05123@yahoo.com")
     new_data_page.creaza_cont_buton()
     new_data_page.selecteaza_buton_radio()
     new_data_page.input_prenume("a")
